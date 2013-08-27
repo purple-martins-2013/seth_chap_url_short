@@ -5,7 +5,7 @@ class UrlsController < ApplicationController
 		@url.long_url = params[:url][:long_url]
 
 		if @url.valid? == false 
-			render root_path and return
+			render 'pages/show' and return
 		else
 			short_url = ''
 			6.times do 
